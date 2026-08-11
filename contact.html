@@ -23,11 +23,75 @@
         <h1 class="title">נשמח לשמוע מכם</h1>
         <p>שאלות על טיפול בצמחים, הזמנות ומשלוחים - כל התשובות כאן</p>
       </section>
+      <section class="box coming-to-us">
+        <h3>מגיעים אלינו</h3>
+        <div class="coming-to-us-cards">
+          <article class="card">
+            <p class="title">כתובת</p>
+            <p class="content">רחוב הגפן 12</p>
+          </article>
+          <article class="card">
+            <p class="title">שעות פתיחה</p>
+            <p class="content">א-ה 9:00 - 19:00</p>
+          </article>
+          <article class="card">
+            <p class="title">שישי</p>
+            <p class="content">9:00 - 14:00</p>
+          </article>
+          <article class="card">
+            <p class="title">טלפון</p>
+            <p class="content">02-5050789</p>
+          </article>
+        </div>
+      </section>
+      <section class="box contant-form">
+        <h3>השאירו פרטים ונחזור אליכם</h3>
+        <p>
+          מתלבטים איזה צמח מתאים לבית שלכם? מלאו את הפרטים ואחת המומחיות שלנו
+          תחזור אליכם עם המלצה אישית.
+        </p>
+        <form id="contact-form" action="/contant" method="post">
+          <div class="column1">
+            <label class="for1" for="name">שם מלא</label>
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="לדוגמא: מיכל כהן"
+              name="name "
+            />
+            <label class="for2" for="help">איך נוכל לעזור?</label>
+            <select name="help" id="help">
+              <option value="main-question">שאלה כללית</option>
+              <option value="adress-questuin">שאלה בדרכי ההגעה לחנות</option>
+              <option value="plants-question">שאלה על סוגי צמחים</option>
+            </select>
+          </div>
+          <div class="column2">
+            <label class="for3" for="email">אימייל לחזרה</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              name="email"
+              required
+            />
+            <label class="for4" for="tell-as">ספרו לנו קצת</label>
+            <textarea
+              placeholder="למשל: מחפשת צמח לפינת אוכל עם מעט אור טבעי..."
+              name="tell-as"
+              id="tell-as"
+              rows="3"
+            ></textarea>
+          </div>
+        </form>
+        <button form="contact-form" type="submit">שליחת הפנייה</button>
+      </section>
     </main>
     <footer>
       <div class="nav-links">
-        <a href="#">דף הבית</a>
-        <a href="./contact.html">צור קשר</a>
+        <a href="./index.html">דף הבית</a>
+        <a href="#">צור קשר</a>
       </div>
       <div class="logo">
         <p>הגינה של מיכל - עם אהבה אור ושמש</p>

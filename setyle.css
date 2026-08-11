@@ -23,7 +23,6 @@ header {
 
 .navbar {
   display: flex;
-
   gap: 1rem;
   justify-content: space-between;
   padding: 0 3rem 0 3rem;
@@ -85,6 +84,7 @@ main .hero h1 {
 
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  justify-items: center;
 }
 
 .card {
@@ -96,6 +96,14 @@ main .hero h1 {
   border: 1px lightgray solid;
   border-radius: 6px;
   text-align: start;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .numbers-cards {
@@ -114,4 +122,115 @@ main .hero h1 {
 
 .shop-numbers .numbers-cards .card h2 {
   color: rgb(208, 179, 13);
+}
+
+.pass-btn {
+  display: flex;
+  align-self: center;
+  transition: transform 0.25s ease;
+}
+
+.pass-btn:hover {
+  outline: 3px solid white;
+  border-radius: 6px;
+  transform: scale(1.05) translateY(-4px);
+}
+
+.pass-btn a {
+  border-radius: 6px;
+  padding: 0.5rem;
+  background: linear-gradient(to right, rgb(57, 213, 70), rgb(208, 179, 13));
+  color: white;
+  font-weight: 600;
+}
+
+.coming-to-us-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.coming-to-us-cards .card .content {
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+form .column1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.4rem;
+}
+
+form .column2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.4rem;
+}
+
+input,
+textarea,
+select {
+  padding: 0.3rem;
+  border: 1px lightgray solid;
+  border-radius: 6px;
+  margin-bottom: 0.7rem;
+}
+
+.contant-form button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  background: linear-gradient(to right, rgb(57, 213, 70), rgb(208, 179, 13));
+  color: white;
+  font-weight: 700;
+  width: 20%;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.contant-form button:hover {
+  border-radius: 6px;
+  outline: 3px solid white;
+  transform: scale(1.05) translateY(-4px);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .plants-cards {
+    grid-template-columns: 1fr;
+  }
+  .numbers-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .coming-to-us-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main {
+    padding: 3%;
+  }
+  form {
+    flex-direction: column;
+  }
+  form .column1 {
+    width: 100%;
+  }
+  form .column2 {
+    width: 100%;
+  }
+  .contant-form button {
+    width: 40%;
+  }
 }
